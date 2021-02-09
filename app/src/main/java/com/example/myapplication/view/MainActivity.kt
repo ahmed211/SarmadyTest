@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
             if (response.status == 200) {
                 binding.rvMovies.adapter = MoviesAdapter(response.data?.photos?.photo!!)
                 binding.progressBar.visibility = View.GONE
+                binding.includeLayoutError.root.visibility = View.GONE
                 binding.rvMovies.visibility = View.VISIBLE
             } else {
                 binding.progressBar.visibility = View.GONE
